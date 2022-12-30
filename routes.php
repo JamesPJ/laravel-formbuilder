@@ -32,4 +32,6 @@ Route::middleware('web')
 		 * Form management routes
 		 */
 		Route::resource('/forms', 'FormController');
+		
+        Route::post('/forms/{fid}','FormController@duplicate')->name('forms.duplicate');
 	});

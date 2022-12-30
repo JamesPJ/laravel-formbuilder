@@ -24,11 +24,13 @@ class CreateFormsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
 
             $table->string('name');
+            $table->string('icon')->nullable();
             $table->string('visibility');
             $table->boolean('allows_edit')->default(false);
 
             $table->string('identifier')->unique();
             $table->text('form_builder_json')->nullable();
+            $table->string('custom_submit_url')->nullable();
 
             $table->softDeletes();
             $table->timestamps();
