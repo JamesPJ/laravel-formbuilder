@@ -1,5 +1,5 @@
 {
-    "name": "jamespj/jaz-form-builder",
+    "name": "jamespj/form-builder",
     "description": "Laravel Package for Creating a Drag-and-Drop Form Builder Using JQuery Form Builder",
     "authors": [
         {
@@ -10,11 +10,11 @@
     "require": {
         "php": ">=5.6.4",
         "illuminate/contracts": ">=5.3",
-        "illuminate/support": ">=5.3",
+        "illuminate/support": ">=5.3"
     },
     "autoload": {
         "psr-4": {
-            "Jamespj\\FormBuilder\\": "src"
+            "Jamespj\\FormBuilder\\": "src/"
         }
     },
     "extra": {
