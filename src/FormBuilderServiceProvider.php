@@ -1,14 +1,14 @@
 <?php
 /*--------------------
-https://github.com/jazmy/laravelformbuilder
+https://github.com/JamesPJ/laravelformbuilder
 Licensed under the GNU General Public License v3.0
-Author: Jasmine Robinson (jazmy.com)
+Author: Jasmine Robinson (JamesPJ.com)
 Last Updated: 12/29/2018
 ----------------------*/
-namespace jazmy\FormBuilder;
+namespace JamesPJ\FormBuilder;
 
-use jazmy\FormBuilder\Middlewares\FormAllowSubmissionEdit;
-use jazmy\FormBuilder\Middlewares\PublicFormAccess;
+use JamesPJ\FormBuilder\Middlewares\FormAllowSubmissionEdit;
+use JamesPJ\FormBuilder\Middlewares\PublicFormAccess;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 

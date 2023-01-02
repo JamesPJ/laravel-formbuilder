@@ -1,14 +1,14 @@
 <?php
 /*--------------------
-https://github.com/jazmy/laravelformbuilder
+https://github.com/JamesPJ/laravelformbuilder
 Licensed under the GNU General Public License v3.0
-Author: Jasmine Robinson (jazmy.com)
+Author: Jasmine Robinson (JamesPJ.com)
 Last Updated: 12/29/2018
 ----------------------*/
-namespace jazmy\FormBuilder\Middlewares;
+namespace JamesPJ\FormBuilder\Middlewares;
 
 use Closure;
-use jazmy\FormBuilder\Models\Submission;
+use JamesPJ\FormBuilder\Models\Submission;
 
 class FormAllowSubmissionEdit
 {
