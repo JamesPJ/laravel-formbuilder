@@ -8,10 +8,13 @@
         }
     ],
     "require": {
+        "php": ">=5.6.4",
+        "illuminate/contracts": ">=5.3",
+        "illuminate/support": ">=5.3",
     },
     "autoload": {
         "psr-4": {
-            "Jamespj\\FormBuilder\\": "src/"
+            "Jamespj\\FormBuilder\\": "src"
         }
     },
     "extra": {
