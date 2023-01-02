@@ -1,13 +1,13 @@
 <?php
 /*--------------------
-https://github.com/JamesPJ/laravelformbuilder
+https://github.com/Jamespj/laravelformbuilder
 Licensed under the GNU General Public License v3.0
-Author: Jasmine Robinson (JamesPJ.com)
+Author: Jasmine Robinson (Jamespj.com)
 Last Updated: 12/29/2018
 ----------------------*/
-namespace JamesPJ\FormBuilder\Events\Form;
+namespace Jamespj\FormBuilder\Events\Form;
 
-use JamesPJ\FormBuilder\Models\Form;
+use Jamespj\FormBuilder\Models\Form;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 
@@ -18,14 +18,14 @@ class FormCreated
     /**
      * The deleted form
      *
-     * @var JamesPJ\FormBuilder\Models\Form
+     * @var Jamespj\FormBuilder\Models\Form
      */
     public $form;
 
     /**
      * Create a new event instance.
      *
-     * @param JamesPJ\FormBuilder\Models\Form $form
+     * @param Jamespj\FormBuilder\Models\Form $form
      * @return void
      */
     public function __construct(Form $form)

@@ -1,16 +1,16 @@
 <?php
 /*--------------------
-https://github.com/JamesPJ/laravelformbuilder
+https://github.com/Jamespj/laravelformbuilder
 Licensed under the GNU General Public License v3.0
-Author: Jasmine Robinson (JamesPJ.com)
+Author: Jasmine Robinson (Jamespj.com)
 Last Updated: 12/29/2018
 ----------------------*/
-namespace JamesPJ\FormBuilder\Controllers;
+namespace Jamespj\FormBuilder\Controllers;
 
 use App\Http\Controllers\Controller;
-use JamesPJ\FormBuilder\Helper;
-use JamesPJ\FormBuilder\Models\Form;
-use JamesPJ\FormBuilder\Models\Submission;
+use Jamespj\FormBuilder\Helper;
+use Jamespj\FormBuilder\Models\Form;
+use Jamespj\FormBuilder\Models\Submission;
 use Illuminate\Http\Request;
 
 class SubmissionController extends Controller

@@ -3,21 +3,21 @@
     "description": "Laravel Package for Creating a Drag-and-Drop Form Builder Using JQuery Form Builder",
     "authors": [
         {
-            "name": "Jasmine Robinson",
-            "email": "jaz@JamesPJ.com"
+            "name": "James PJ",
+            "email": "hello@jamespj.com"
         }
     ],
     "require": {
     },
     "autoload": {
         "psr-4": {
-            "JamesPJ\\FormBuilder\\": "src/"
+            "Jamespj\\FormBuilder\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "JamesPJ\\FormBuilder\\FormBuilderServiceProvider"
+                "Jamespj\\FormBuilder\\FormBuilderServiceProvider"
             ]
         }
     }

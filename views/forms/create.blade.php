@@ -39,7 +39,7 @@
 
                                     <select name="visibility" id="visibility" class="form-control" required="required">
                                         <option value="">Select Form Visibility</option>
-                                        @foreach(JamesPJ\FormBuilder\Models\Form::$visibility_options as $option)
+                                        @foreach(Jamespj\FormBuilder\Models\Form::$visibility_options as $option)
                                             <option value="{{ $option['id'] }}">{{ $option['name'] }}</option>
                                         @endforeach
                                     </select>
@@ -103,5 +103,5 @@
         window.FormBuilder = window.FormBuilder || {}
         window.FormBuilder.form_roles = @json($form_roles);
     </script>
-    <script src="{{ asset('vendor/formbuilder/js/create-form.js') }}{{ JamesPJ\FormBuilder\Helper::bustCache() }}" defer></script>
+    <script src="{{ asset('vendor/formbuilder/js/create-form.js') }}{{ Jamespj\FormBuilder\Helper::bustCache() }}" defer></script>
 @endpush

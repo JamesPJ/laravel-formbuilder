@@ -30,7 +30,7 @@ return [
     /**
      * The class that will provide the roles we will display on form create or edit pages?
      */
-    'roles_provider' => JamesPJ\FormBuilder\Services\RolesProvider::class,
+    'roles_provider' => Jamespj\FormBuilder\Services\RolesProvider::class,
 
     /**
      * Models used in form builder

@@ -1,14 +1,14 @@
 <?php
 /*--------------------
-https://github.com/JamesPJ/laravelformbuilder
+https://github.com/Jamespj/laravelformbuilder
 Licensed under the GNU General Public License v3.0
-Author: Jasmine Robinson (JamesPJ.com)
+Author: Jasmine Robinson (Jamespj.com)
 Last Updated: 12/29/2018
 ----------------------*/
-namespace JamesPJ\FormBuilder\Traits;
+namespace Jamespj\FormBuilder\Traits;
 
-use JamesPJ\FormBuilder\Models\Form;
-use JamesPJ\FormBuilder\Models\Submission;
+use Jamespj\FormBuilder\Models\Form;
+use Jamespj\FormBuilder\Models\Submission;
 
 trait HasFormBuilderTraits
 {

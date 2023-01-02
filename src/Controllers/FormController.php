@@ -1,19 +1,19 @@
 <?php
 /*--------------------
-https://github.com/JamesPJ/laravelformbuilder
+https://github.com/Jamespj/laravelformbuilder
 Licensed under the GNU General Public License v3.0
-Author: Jasmine Robinson (JamesPJ.com)
+Author: Jasmine Robinson (Jamespj.com)
 Last Updated: 12/29/2018
 ----------------------*/
-namespace JamesPJ\FormBuilder\Controllers;
+namespace Jamespj\FormBuilder\Controllers;
 
 use App\Http\Controllers\Controller;
-use JamesPJ\FormBuilder\Events\Form\FormCreated;
-use JamesPJ\FormBuilder\Events\Form\FormDeleted;
-use JamesPJ\FormBuilder\Events\Form\FormUpdated;
-use JamesPJ\FormBuilder\Helper;
-use JamesPJ\FormBuilder\Models\Form;
-use JamesPJ\FormBuilder\Requests\SaveFormRequest;
+use Jamespj\FormBuilder\Events\Form\FormCreated;
+use Jamespj\FormBuilder\Events\Form\FormDeleted;
+use Jamespj\FormBuilder\Events\Form\FormUpdated;
+use Jamespj\FormBuilder\Helper;
+use Jamespj\FormBuilder\Models\Form;
+use Jamespj\FormBuilder\Requests\SaveFormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Throwable;
@@ -64,7 +64,7 @@ class FormController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  JamesPJ\FormBuilder\Requests\SaveFormRequest $request
+     * @param  Jamespj\FormBuilder\Requests\SaveFormRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(SaveFormRequest $request)
@@ -144,7 +144,7 @@ class FormController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  JamesPJ\FormBuilder\Requests\SaveFormRequest $request
+     * @param  Jamespj\FormBuilder\Requests\SaveFormRequest $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
