@@ -33,6 +33,11 @@ return [
     'roles_provider' => Jamespj\FormBuilder\Services\RolesProvider::class,
 
     /**
+     * Route middlewares
+     */
+    'middlewares' => [ 'auth' ],
+
+    /**
      * Models used in form builder
      */
     'models' => [
