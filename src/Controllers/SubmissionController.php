@@ -35,9 +35,17 @@ class SubmissionController extends Controller
     {
         $user = auth()->user();
 
-        $form = Form::where(['user_id' => $user->id, 'id' => $form_id])
-                    ->with(['user'])
-                    ->firstOrFail();
+        $role_id = $user->role->role_id;
+
+        if($role_id == 1) {
+            $form = Form::where(['id' => $form_id])
+                        ->with(['user'])
+                        ->firstOrFail();
+        } else {
+            $form = Form::where(['user_id' => $user->id, 'id' => $form_id])
+                        ->with(['user'])
+                        ->firstOrFail();
+        }
 
         $submissions = $form->submissions()
                             ->with('user')
