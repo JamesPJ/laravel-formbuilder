@@ -39,7 +39,15 @@ class FormController extends Controller
     {
         $pageTitle = "Forms";
 
-        $forms = Form::getForUser(auth()->user());
+        $role_id = auth()->user()->role->role_id;
+
+        if($role_id == 1) {
+            $forms = Form::withCount('submissions')
+                ->latest()
+                ->paginate(100);
+        } else {
+            $forms = Form::getForUser(auth()->user());
+        }
 
         return view('formbuilder::forms.index', compact('pageTitle', 'forms'));
     }
