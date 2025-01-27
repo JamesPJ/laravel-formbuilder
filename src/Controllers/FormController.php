@@ -27,7 +27,7 @@ class FormController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', 'web');
     }
 
     /**
@@ -35,19 +35,29 @@ class FormController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $routeName = $request->route()->getName();
+        $user = auth()->user();
+
         $pageTitle = "Forms";
 
-        $role_id = auth()->user()->role->role_id;
+        if(!$user->can($routeName)) {
+            if($request->ajax()) {
+                return response('Access denied!', 401);
+            }
+            abort(401);
+        }
 
-        if($role_id == 1) {
+        // $role_id = $user->role->role_id;
+
+        // if($role_id == 1) {
             $forms = Form::withCount('submissions')
                 ->latest()
                 ->paginate(100);
-        } else {
-            $forms = Form::getForUser(auth()->user());
-        }
+        // } else {
+        //     $forms = Form::getForUser($user);
+        // }
 
         return view('formbuilder::forms.index', compact('pageTitle', 'forms'));
     }

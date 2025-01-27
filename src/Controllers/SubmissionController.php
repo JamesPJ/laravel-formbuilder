@@ -22,7 +22,7 @@ class SubmissionController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', 'web');
     }
 
     /**
@@ -31,21 +31,29 @@ class SubmissionController extends Controller
      * @param integer $form_id
      * @return \Illuminate\Http\Response
      */
-    public function index($form_id)
+    public function index(Request $request, $form_id)
     {
+        $routeName = $request->route()->getName();
         $user = auth()->user();
 
         $role_id = $user->role->role_id;
 
-        if($role_id == 1) {
+        if(!$user->can($routeName)) {
+            if($request->ajax()) {
+                return response('Access denied!', 401);
+            }
+            abort(401);
+        }
+
+        // if($role_id == 1) {
             $form = Form::where(['id' => $form_id])
                         ->with(['user'])
                         ->firstOrFail();
-        } else {
-            $form = Form::where(['user_id' => $user->id, 'id' => $form_id])
-                        ->with(['user'])
-                        ->firstOrFail();
-        }
+        // } else {
+        //     $form = Form::where(['user_id' => $user->id, 'id' => $form_id])
+        //                 ->with(['user'])
+        //                 ->firstOrFail();
+        // }
 
         $submissions = $form->submissions()
                             ->with('user')
