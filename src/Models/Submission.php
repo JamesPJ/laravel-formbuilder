@@ -163,27 +163,30 @@ class Submission extends Model
     {
         $str = '';
 
-        if(
-            ! empty($this->content[$key]) &&
-            is_array($this->content[$key])
-        ) {
-            $str = implode(', ', $this->content[$key]);
-        } else {
-            $str = $this->content[$key] ?? '';
-        }
-
-        if ($limit_string) {
-            $str = Str::limit($str, 20, '');
-        }
-
-        // if the type is 'file' then we have to render this as a link
-        if ($type == 'file') {
-		if(isset($this->content[$key])){
-			$file_link = Storage::url($this->content[$key]);
-			$str = "<a href='{$file_link}'>{$str}</a>";
-	    	} else {
-			$str = "No file";
-	    	}
+        if(isset($this->content[$key])) {
+            if(
+                is_array($this->content[$key])
+            ) {
+                if(! empty($this->content[$key])) {
+                    $str = implode(', ', $this->content[$key]);
+                }
+            } else {
+                $str = $this->content[$key] ?? '';
+            }
+    
+            if ($limit_string) {
+                $str = Str::limit($str, 20, '');
+            }
+    
+            // if the type is 'file' then we have to render this as a link
+            if ($type == 'file') {
+            if(isset($this->content[$key])){
+                $file_link = Storage::url($str);
+                $str = "<a href='{$file_link}'>{$str}</a>";
+                } else {
+                $str = "No file";
+                }
+            }
         }
 
         return new HtmlString($str);
